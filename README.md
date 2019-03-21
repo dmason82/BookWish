@@ -14,5 +14,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
+run `ng e2e` to execute tests via [Protractor](https://protractor.angular.io/).
+
 ## Notes
-I removed the sections from the default README generated from the angular CLI that I do not intend on supporting as a part of this project.
+I added e2e as an option since I fixed the protractor test, they don't really test any e2e application logic as I don't have 
+a lot of experience with the tool, but at least it passes. :)
