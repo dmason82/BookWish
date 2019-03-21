@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "BookWish"
+  "defaultProject": "BookWish",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

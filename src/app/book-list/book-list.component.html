@@ -1,0 +1,27 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="select">
+    <mat-header-cell mat-header-cell *matHeaderCellDef>
+    </mat-header-cell>
+    <mat-cell mat-cell *matCellDef="let row">
+      <button mat-button (click)=" $event ? toggleIsWished(row): null">{{getWishButtonText(row)}}</button>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="title">
+    <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.title}}</mat-cell>>
+  </ng-container>
+
+  <ng-container matColumnDef="authors">
+    <mat-header-cell *matHeaderCellDef> Author(s) </mat-header-cell>
+    <mat-cell mat-cell *matCellDef="let element">{{element.authors}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="releaseDate">
+    <mat-header-cell *matHeaderCellDef>Release Date</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.releaseDate | date}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
