@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
     this.bookLoadError$ = this.store.select(getLoadError);
   }
 
-  onToggleWishedBook(event: any){
+  onToggleWishedBook(event: any) {
     console.log(JSON.stringify(event));
     this.store.dispatch(new ToggleWish(event));
   }
